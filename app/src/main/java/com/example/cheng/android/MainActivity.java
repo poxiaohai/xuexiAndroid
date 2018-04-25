@@ -9,7 +9,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.cheng.android.activity.CircleProgressViewActivity;
+import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
+import com.example.cheng.android.huanxin.HuanXinMainActivity;
 import com.example.cheng.android.view.CircleProgressView;
 
 import java.util.ArrayList;
@@ -35,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, CircleProgressViewActivity.class);
                         startActivity(intent);
                         break;
+                    case 1:
+                        intent.setClass(MainActivity.this, VideoActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent.setClass(MainActivity.this, HuanXinMainActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -43,5 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void inintData() {
         list.add("haha");
+        list.add("视频播放");
+        list.add("环信");
     }
 }

@@ -13,7 +13,7 @@ android {
     lintOptions {
         abortOnError false
     }
-    signingConfigs{
+    signingConfigs {
         releaseConfig {
             storeFile file("jzvd-keystore")
             storePassword "123456"
@@ -37,4 +37,5 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'cn.jzvd:jiaozivideoplayer:6.2.9'
+    compile 'com.hyphenate:hyphenate-sdk:3.3.0'
 }
