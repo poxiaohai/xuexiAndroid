@@ -68,7 +68,9 @@
         </receiver>
 
         <activity android:name=".huanxin.HuanXinMainActivity" />
-        <activity android:name=".huanxin.FriendListActivity"></activity>
+        <activity android:name=".huanxin.FriendListActivity" />
+        <activity android:name=".Thead.TheadActivity" />
+        <activity android:name=".Thead.Main2SubTheadActivity"></activity>
     </application>
 
 </manifest>

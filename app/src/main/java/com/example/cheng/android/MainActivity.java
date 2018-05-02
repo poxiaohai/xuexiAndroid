@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
@@ -45,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, HuanXinMainActivity.class);
                         startActivity(intent);
                         break;
+                    case 3:
+                        intent.setClass(MainActivity.this, TheadActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -55,5 +60,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("haha");
         list.add("视频播放");
         list.add("环信");
+        list.add("线程之间通信");
     }
 }
