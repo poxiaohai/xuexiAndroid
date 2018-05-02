@@ -23,6 +23,15 @@ public class TheadActivity extends AppCompatActivity {
     TextView textview1;
     @BindView(R.id.textview2)
     TextView textview2;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_thead);
+        ButterKnife.bind(this);
+    }
+
     @SuppressLint("HandlerLeak")
     Handler mHandler = new Handler() {
         @Override
@@ -36,15 +45,6 @@ public class TheadActivity extends AppCompatActivity {
             }
         }
     };
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thead);
-        ButterKnife.bind(this);
-    }
-
     @OnClick({R.id.textview1, R.id.textview2,R.id.textview3})
     public void onViewClicked(View view) {
         switch (view.getId()) {
