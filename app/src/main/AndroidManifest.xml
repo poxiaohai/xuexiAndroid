@@ -67,7 +67,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".huanxin.HuanXinMainActivity"></activity>
+        <activity android:name=".huanxin.HuanXinMainActivity" />
+        <activity android:name=".huanxin.FriendListActivity"></activity>
     </application>
 
 </manifest>
