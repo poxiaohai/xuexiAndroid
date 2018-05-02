@@ -10,6 +10,10 @@ import android.util.Log;
 
 import com.example.cheng.android.R;
 
+/**
+ * 主线程向子线程发送消息
+ */
+
 public class Main2SubTheadActivity extends AppCompatActivity {
     //创建子线程
     class MyThread extends Thread{
