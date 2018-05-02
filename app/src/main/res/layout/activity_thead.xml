@@ -18,5 +18,11 @@
         android:layout_height="100dp"
         android:text="主线程向子线程里发送消息"/>
 
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="线程之间通信"/>
+
 
 </LinearLayout>

@@ -70,7 +70,8 @@
         <activity android:name=".huanxin.HuanXinMainActivity" />
         <activity android:name=".huanxin.FriendListActivity" />
         <activity android:name=".Thead.TheadActivity" />
-        <activity android:name=".Thead.Main2SubTheadActivity"></activity>
+        <activity android:name=".Thead.Main2SubTheadActivity" />
+        <activity android:name=".Thead.SubTheadMessageActivity"></activity>
     </application>
 
 </manifest>

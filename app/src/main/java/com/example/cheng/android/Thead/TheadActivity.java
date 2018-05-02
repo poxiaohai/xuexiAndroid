@@ -45,7 +45,7 @@ public class TheadActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.textview1, R.id.textview2})
+    @OnClick({R.id.textview1, R.id.textview2,R.id.textview3})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.textview1:
@@ -62,6 +62,11 @@ public class TheadActivity extends AppCompatActivity {
             case R.id.textview2:
                 Intent intent=new Intent(TheadActivity.this,Main2SubTheadActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.textview3:
+                Intent intent1=new Intent(TheadActivity.this,SubTheadMessageActivity.class);
+                startActivity(intent1);
                 break;
         }
     }
