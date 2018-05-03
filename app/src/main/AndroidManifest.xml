@@ -71,7 +71,9 @@
         <activity android:name=".huanxin.FriendListActivity" />
         <activity android:name=".Thead.TheadActivity" />
         <activity android:name=".Thead.Main2SubTheadActivity" />
-        <activity android:name=".Thead.SubTheadMessageActivity"></activity>
+        <activity android:name=".Thead.SubTheadMessageActivity" />
+        <activity android:name=".shijian.Activity.ScrollViewForListViewActivity" />
+        <activity android:name=".shijian.Activity.ShijianActivity"></activity>
     </application>
 
 </manifest>

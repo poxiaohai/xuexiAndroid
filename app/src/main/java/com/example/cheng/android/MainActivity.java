@@ -13,6 +13,8 @@ import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
 import com.example.cheng.android.huanxin.HuanXinMainActivity;
+import com.example.cheng.android.shijian.Activity.ScrollViewForListViewActivity;
+import com.example.cheng.android.shijian.Activity.ShijianActivity;
 import com.example.cheng.android.view.CircleProgressView;
 
 import java.util.ArrayList;
@@ -50,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, TheadActivity.class);
                         startActivity(intent);
                         break;
+                    case 4:
+                        intent.setClass(MainActivity.this, ScrollViewForListViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 5:
+                        intent.setClass(MainActivity.this, ShijianActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -61,5 +71,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("视频播放");
         list.add("环信");
         list.add("线程之间通信");
+        list.add("事件冲突");
+        list.add("事件冲突2");
     }
 }
