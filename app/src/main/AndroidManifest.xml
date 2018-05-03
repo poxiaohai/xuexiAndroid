@@ -73,7 +73,9 @@
         <activity android:name=".Thead.Main2SubTheadActivity" />
         <activity android:name=".Thead.SubTheadMessageActivity" />
         <activity android:name=".shijian.Activity.ScrollViewForListViewActivity" />
-        <activity android:name=".shijian.Activity.ShijianActivity"></activity>
+        <activity android:name=".shijian.Activity.ShijianActivity" />
+        <activity android:name=".view.ViewActivity" />
+        <activity android:name=".view.ViewGroupActivity"></activity>
     </application>
 
 </manifest>
