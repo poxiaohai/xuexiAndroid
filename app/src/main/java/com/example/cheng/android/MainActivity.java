@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.cheng.android.Listview.ListViewActivity;
 import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
@@ -65,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, ViewActivity.class);
                         startActivity(intent);
                         break;
+                    case 7:
+                        intent.setClass(MainActivity.this, ListViewActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -79,5 +84,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("事件冲突");
         list.add("事件冲突2");
         list.add("自定义view");
+        list.add("listview");
     }
 }

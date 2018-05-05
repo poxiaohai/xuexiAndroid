@@ -75,7 +75,8 @@
         <activity android:name=".shijian.Activity.ScrollViewForListViewActivity" />
         <activity android:name=".shijian.Activity.ShijianActivity" />
         <activity android:name=".view.ViewActivity" />
-        <activity android:name=".view.ViewGroupActivity"></activity>
+        <activity android:name=".view.ViewGroupActivity" />
+        <activity android:name=".Listview.ListViewActivity"></activity>
     </application>
 
 </manifest>
