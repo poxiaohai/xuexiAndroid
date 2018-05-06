@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.cheng.android.Listview.ListViewActivity;
+import com.example.cheng.android.RecyclerView.RecyclerViewActivity;
+import com.example.cheng.android.RecyclerView.RecyclerViewActivity2;
 import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
@@ -70,6 +72,14 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, ListViewActivity.class);
                         startActivity(intent);
                         break;
+                    case 8:
+                        intent.setClass(MainActivity.this, RecyclerViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 9:
+                        intent.setClass(MainActivity.this, RecyclerViewActivity2.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -85,5 +95,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("事件冲突2");
         list.add("自定义view");
         list.add("listview");
+        list.add("RecyclerView");
+        list.add("RecyclerView2");
     }
 }

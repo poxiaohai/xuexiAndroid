@@ -76,7 +76,9 @@
         <activity android:name=".shijian.Activity.ShijianActivity" />
         <activity android:name=".view.ViewActivity" />
         <activity android:name=".view.ViewGroupActivity" />
-        <activity android:name=".Listview.ListViewActivity"></activity>
+        <activity android:name=".Listview.ListViewActivity" />
+        <activity android:name=".RecyclerView.RecyclerViewActivity" />
+        <activity android:name=".RecyclerView.RecyclerViewActivity2"></activity>
     </application>
 
 </manifest>
