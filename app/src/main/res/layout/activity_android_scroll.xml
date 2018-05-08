@@ -20,6 +20,11 @@
     <com.example.cheng.android.Scroll.View.DragView3
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:visibility="gone"
         android:background="#c0c0c0"/>
+    <com.example.cheng.android.Scroll.View.DragView4
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#Ed6262"/>
 
 </LinearLayout>
