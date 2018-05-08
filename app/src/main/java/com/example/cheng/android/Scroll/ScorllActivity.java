@@ -16,6 +16,8 @@ public class ScorllActivity extends AppCompatActivity {
 
     @BindView(R.id.textview1)
     TextView textview1;
+    @BindView(R.id.textview2)
+    TextView textview2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +26,15 @@ public class ScorllActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.textview1})
+    @OnClick({R.id.textview1,R.id.textview2})
     public void onViewClicked(View view) {
         Intent intent=new Intent();
         switch (view.getId()){
             case R.id.textview1:
+                intent.setClass(ScorllActivity.this,AndroidScrollActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.textview2:
                 intent.setClass(ScorllActivity.this,AndroidScrollActivity.class);
                 startActivity(intent);
                 break;

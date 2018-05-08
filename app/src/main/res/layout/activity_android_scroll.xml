@@ -7,8 +7,19 @@
     android:orientation="vertical"
     tools:context="com.example.cheng.android.Scroll.AndroidScrollActivity">
     <com.example.cheng.android.Scroll.View.DragView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
         android:background="@color/colorAccent"/>
+
+    <com.example.cheng.android.Scroll.View.DragView2
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"/>
+    <com.example.cheng.android.Scroll.View.DragView3
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#c0c0c0"/>
 
 </LinearLayout>
