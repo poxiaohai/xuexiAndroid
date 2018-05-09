@@ -80,7 +80,8 @@
         <activity android:name=".RecyclerView.RecyclerViewActivity" />
         <activity android:name=".RecyclerView.RecyclerViewActivity2" />
         <activity android:name=".Scroll.AndroidScrollActivity" />
-        <activity android:name=".Scroll.ScorllActivity"></activity>
+        <activity android:name=".Scroll.ScorllActivity" />
+        <activity android:name=".Permission.PermissionActivity"></activity>
     </application>
 
 </manifest>
