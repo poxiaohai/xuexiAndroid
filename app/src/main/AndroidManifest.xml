@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".App"
@@ -82,7 +82,11 @@
         <activity android:name=".RecyclerView.RecyclerViewActivity2" />
         <activity android:name=".Scroll.AndroidScrollActivity" />
         <activity android:name=".Scroll.ScorllActivity" />
-        <activity android:name=".Permission.PermissionActivity"></activity>
+        <activity android:name=".Permission.PermissionActivity" />
+        <activity
+            android:name=".Permission.PermissionUtilsActivity"
+            android:label="@string/title_activity_permission_utils"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

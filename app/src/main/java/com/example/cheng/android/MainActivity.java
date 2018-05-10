@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.cheng.android.Listview.ListViewActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
+import com.example.cheng.android.Permission.PermissionUtilsActivity;
 import com.example.cheng.android.RecyclerView.RecyclerViewActivity;
 import com.example.cheng.android.RecyclerView.RecyclerViewActivity2;
 import com.example.cheng.android.Scroll.AndroidScrollActivity;
@@ -91,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, PermissionActivity.class);
                         startActivity(intent);
                         break;
+                    case 12:
+                        intent.setClass(MainActivity.this, PermissionUtilsActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -110,5 +115,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("RecyclerView2");
         list.add("Android Scroll分析");
         list.add("权限管理");
+        list.add("权限框架");
     }
 }
