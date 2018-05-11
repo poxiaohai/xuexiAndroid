@@ -50,7 +50,7 @@ public class PermissionUtilsActivity extends AppCompatActivity {
     /**
      * 需要请求权限
      */
-    @NeedsPermission(Manifest.permission.CALL_PHONE)
+    @NeedsPermission({Manifest.permission.CALL_PHONE,Manifest.permission.CAMERA})
     public void call() {
         Intent intent=new Intent(Intent.ACTION_CALL);
         Uri data=Uri.parse("tel:100086");
