@@ -42,7 +42,7 @@ public class PermissionUtilsActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()){
             case R.id.call_phone:
-
+                PermissionUtilsActivityPermissionsDispatcher.callWithCheck(PermissionUtilsActivity.this);
                 break;
         }
     }
@@ -51,7 +51,7 @@ public class PermissionUtilsActivity extends AppCompatActivity {
      * 需要请求权限
      */
     @NeedsPermission(Manifest.permission.CALL_PHONE)
-    private void call() {
+    public void call() {
         Intent intent=new Intent(Intent.ACTION_CALL);
         Uri data=Uri.parse("tel:100086");
         intent.setData(data);
