@@ -19,6 +19,7 @@ import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
+import com.example.cheng.android.google.GoogleActivity;
 import com.example.cheng.android.huanxin.HuanXinMainActivity;
 import com.example.cheng.android.shijian.Activity.ScrollViewForListViewActivity;
 import com.example.cheng.android.shijian.Activity.ShijianActivity;
@@ -96,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, PermissionUtilsActivity.class);
                         startActivity(intent);
                         break;
+                    case 13:
+                        intent.setClass(MainActivity.this, GoogleActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -116,5 +121,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("Android Scroll分析");
         list.add("权限管理");
         list.add("权限框架");
+        list.add("google");
     }
 }

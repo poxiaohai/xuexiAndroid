@@ -20,7 +20,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".App"
@@ -87,7 +87,13 @@
         <activity
             android:name=".Permission.PermissionUtilsActivity"
             android:label="@string/title_activity_permission_utils"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".google.GoogleActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDkM7Vd3CzxXeBF-vGmYSFGU6yMjqPQ0yo"/>
+        <activity android:name=".google.SimpleFragmentModeActivity"/>
     </application>
 
 </manifest>
