@@ -2,6 +2,7 @@ package com.example.cheng.android.google;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +12,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.cheng.android.R;
+import com.example.cheng.android.google.utils.GoogleUutil;
+import com.example.cheng.android.google.utils.LoadResponse;
+import com.example.cheng.android.google.utils.RouteInfos;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -24,6 +28,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
+
 public class SimpleFragmentModeActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener {
     GoogleMap mGoogleMap;
     GoogleApiClient mGoogleApiClient;
@@ -41,19 +48,22 @@ public class SimpleFragmentModeActivity extends AppCompatActivity implements OnM
                 .addApi(Places.PLACE_DETECTION_API)
                 .enableAutoManage(this, this)
                 .build();
-
-//        startLocation();
     }
 
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        double lat = 0.0;
-        double lng = 0.0;
-        LatLng appointLoc = new LatLng(lat, lng);
+        LatLng sydney = new LatLng(-33.852, 151.211);
+        googleMap.addMarker(new MarkerOptions().position(sydney)
+                .title("Marker in Sydney"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        googleMap.moveCamera(CameraUpdateFactory.zoomTo(15));
 
-        // 移动地图到指定经度的位置
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(appointLoc));
+        String url = GoogleUutil.getDirectionsUrl(sydney, sydney);
+        googleMap.addMarker(new MarkerOptions()
+                .position(sydney)
+                .title("商家")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
     }
 
 
