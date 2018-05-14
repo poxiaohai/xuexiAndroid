@@ -19,6 +19,7 @@ import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
+import com.example.cheng.android.bugly.BuglyActivity;
 import com.example.cheng.android.google.GoogleActivity;
 import com.example.cheng.android.huanxin.HuanXinMainActivity;
 import com.example.cheng.android.shijian.Activity.ScrollViewForListViewActivity;
@@ -101,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, GoogleActivity.class);
                         startActivity(intent);
                         break;
+                    case 14:
+                        intent.setClass(MainActivity.this, BuglyActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -122,5 +127,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("权限管理");
         list.add("权限框架");
         list.add("google");
+        list.add("bugly热更新");
     }
 }

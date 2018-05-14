@@ -1,9 +1,13 @@
 package com.example.cheng.android;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.beta.Beta;
 
 /**
  * Created by cheng on 2018/4/25.
@@ -14,6 +18,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         initoptions();
+        Bugly.init(this, "f9a9490b27", true);
     }
 
     /**
@@ -31,5 +36,15 @@ public class App extends Application {
         EMClient.getInstance().init(this, options);
 //在做打包混淆时，关闭debug模式，避免消耗不必要的资源
         EMClient.getInstance().setDebugMode(true);
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(base);
+
+
+        // 安装tinker
+        Beta.installTinker();
     }
 }
