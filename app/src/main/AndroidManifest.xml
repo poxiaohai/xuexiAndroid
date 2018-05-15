@@ -115,7 +115,8 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".bugly.BuglyActivity"></activity>
+        <activity android:name=".bugly.BuglyActivity" />
+        <activity android:name=".Okgo.OKGoActivity"></activity>
     </application>
 
 </manifest>

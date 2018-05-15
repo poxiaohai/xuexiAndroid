@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.cheng.android.Listview.ListViewActivity;
+import com.example.cheng.android.Okgo.OKGoActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
 import com.example.cheng.android.Permission.PermissionUtilsActivity;
 import com.example.cheng.android.RecyclerView.RecyclerViewActivity;
@@ -106,6 +107,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, BuglyActivity.class);
                         startActivity(intent);
                         break;
+                    case 15:
+                        intent.setClass(MainActivity.this, OKGoActivity.class);
+                        startActivity(intent);
+                        break;
+
                 }
             }
         });
@@ -128,5 +134,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("权限框架");
         list.add("google");
         list.add("bugly热更新");
+        list.add("okgo");
     }
 }

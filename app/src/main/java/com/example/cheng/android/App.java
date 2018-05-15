@@ -6,8 +6,15 @@ import android.support.multidex.MultiDex;
 
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.cache.CacheEntity;
+import com.lzy.okgo.cache.CacheMode;
+import com.lzy.okgo.cookie.store.PersistentCookieStore;
+import com.socks.library.KLog;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
+
+import java.util.logging.Level;
 
 /**
  * Created by cheng on 2018/4/25.
@@ -19,6 +26,16 @@ public class App extends Application {
         super.onCreate();
         initoptions();
         Bugly.init(this, "f9a9490b27", true);
+        initOkgo();
+        initLogo();
+    }
+
+    private void initLogo() {
+        KLog.init(BuildConfig.DEBUG);
+    }
+
+    private void initOkgo() {
+        OkGo.init(this);
     }
 
     /**
