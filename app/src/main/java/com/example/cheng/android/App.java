@@ -2,8 +2,11 @@ package com.example.cheng.android;
 
 import android.app.Application;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.multidex.MultiDex;
 
+import com.example.cheng.GreenDao.DaoMaster;
+import com.example.cheng.GreenDao.DaoSession;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.lzy.okgo.OkGo;
@@ -21,13 +24,31 @@ import java.util.logging.Level;
  */
 
 public class App extends Application {
+    private DaoMaster.DevOpenHelper mHelper;
+    private SQLiteDatabase db;
+    private DaoMaster mDaoMaster;
+    private DaoSession mDaoSession;
+    public static App instances;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        instances=this;
         initoptions();
         Bugly.init(this, "f9a9490b27", true);
         initOkgo();
         initLogo();
+        setDatabase();
+    }
+
+    private void setDatabase() {
+
+        mHelper = new DaoMaster.DevOpenHelper(this, "notes-db", null);
+        db = mHelper.getWritableDatabase();
+        // 注意：该数据库连接属于 DaoMaster，所以多个 Session 指的是相同的数据库连接。
+        mDaoMaster = new DaoMaster(db);
+        mDaoSession = mDaoMaster.newSession();
+
     }
 
     private void initLogo() {
@@ -59,9 +80,19 @@ public class App extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(base);
-
-
         // 安装tinker
         Beta.installTinker();
     }
+
+    public DaoSession getDaoSession() {
+        return mDaoSession;
+    }
+    public SQLiteDatabase getDb() {
+        return db;
+    }
+
+    public static App getInstances(){
+        return instances;
+    }
+
 }

@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply from: 'tinker-support.gradle'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -35,6 +36,11 @@ android {
             signingConfig signingConfigs.releaseConfig
         }
     }
+    greendao{
+        schemaVersion 1
+        daoPackage'com.example.cheng.GreenDao'
+        targetGenDir'src/main/java'
+    }
 
 }
 
@@ -65,5 +71,7 @@ dependencies {
     compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.google.maps.android:android-maps-utils:0.4.+'
+    compile 'org.greenrobot:greendao:3.1.0'
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
 
 }

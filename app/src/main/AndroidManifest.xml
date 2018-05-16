@@ -116,7 +116,8 @@
         </provider>
 
         <activity android:name=".bugly.BuglyActivity" />
-        <activity android:name=".Okgo.OKGoActivity"></activity>
+        <activity android:name=".Okgo.OKGoActivity" />
+        <activity android:name="com.example.cheng.GreenDao.GreenDaoActivity"></activity>
     </application>
 
 </manifest>

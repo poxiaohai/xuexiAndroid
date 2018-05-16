@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.cheng.GreenDao.GreenDaoActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
 import com.example.cheng.android.Okgo.OKGoActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
@@ -111,6 +112,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, OKGoActivity.class);
                         startActivity(intent);
                         break;
+                    case 16:
+                        intent.setClass(MainActivity.this, GreenDaoActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -135,5 +140,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("google");
         list.add("bugly热更新");
         list.add("okgo");
+        list.add("数据库操作");
     }
 }
