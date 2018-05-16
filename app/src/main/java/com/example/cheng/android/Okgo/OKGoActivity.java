@@ -75,7 +75,7 @@ public class OKGoActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
                         String json=s;
-                        KLog.json(json);
+                        KLog.e(json);
 
                     }
 
