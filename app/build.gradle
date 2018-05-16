@@ -63,4 +63,7 @@ dependencies {
     //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
     compile 'com.lzy.net:okgo:2.1.4'
     compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.google.maps.android:android-maps-utils:0.4.+'
+
 }

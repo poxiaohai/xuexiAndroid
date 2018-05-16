@@ -7,7 +7,20 @@ import com.google.android.gms.maps.model.LatLng;
  */
 
 public  class GoogleUutil {
-    public static String getDirectionsUrl(LatLng origin, LatLng dest) {
+    /**
+     * 通过起点终点，组合成url
+     *
+     * @param origin
+     * @param dest
+     * @return
+     */
+    public static String getDirectionsUrl(LatLng origin,LatLng waypoints ,LatLng dest) {
+        //31.923951, 117.124891
+        //31.9283382,117.1202566,
+        //31.9283044,117.1202666
+
+
+
         // Origin of route
         String str_origin = "origin=" + origin.latitude + ","
                 + origin.longitude;
@@ -21,24 +34,20 @@ public  class GoogleUutil {
         // Travelling Mode
         String mode = "mode=driving";
 
-        // String waypointLatLng = "waypoints="+"40.036675"+","+"116.32885";
+        //waypoints,116.32885,40.036675
+        String waypointLatLng = "waypoints="+waypoints.latitude+","+waypoints.longitude;
 
-        // 如果使用途径点，需要添加此字段
-        //   String waypoints = "waypoints=31.8307693875,117.2510304188";
-
-        String parameters = null;
         // Building the parameters to the web service
+        String parameters = str_origin + "&" + str_dest + "&" + sensor + "&"
+                + mode+"&"+waypointLatLng;
 
-        parameters = str_origin + "&" + str_dest + "&" + sensor + "&" + mode;
-        // parameters = str_origin + "&" + str_dest + "&" + sensor + "&"
-        // + mode+"&"+waypoints;
         // Output format
-        // String output = "json";
         String output = "json";
 
         // Building the url to the web service
         String url = "https://maps.googleapis.com/maps/api/directions/"
                 + output + "?" + parameters;
+        System.out.println("getDerectionsURL--->: " + url);
         return url;
     }
 }

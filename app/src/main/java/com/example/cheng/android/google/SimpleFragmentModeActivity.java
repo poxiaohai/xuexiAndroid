@@ -12,6 +12,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.cheng.android.R;
+import com.example.cheng.android.google.utils.GoogleModel;
 import com.example.cheng.android.google.utils.GoogleUutil;
 import com.example.cheng.android.google.utils.LoadResponse;
 import com.example.cheng.android.google.utils.RouteInfos;
@@ -30,6 +31,16 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.gson.Gson;
+import com.google.maps.android.PolyUtil;
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.callback.StringCallback;
+import com.socks.library.KLog;
+
+import java.util.List;
+
+import okhttp3.Call;
+import okhttp3.Response;
 
 public class SimpleFragmentModeActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener {
     GoogleMap mGoogleMap;
@@ -54,16 +65,37 @@ public class SimpleFragmentModeActivity extends AppCompatActivity implements OnM
     @Override
     public void onMapReady(GoogleMap googleMap) {
         LatLng sydney = new LatLng(-33.852, 151.211);
-        googleMap.addMarker(new MarkerOptions().position(sydney)
-                .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+//        googleMap.addMarker(new MarkerOptions().position(sydney)
+//                .title("Marker in Sydney"));
+        //31.923951, 117.124891
+       //31.9342032,117.1377968,
+        //31.9283044,117.1202666
+        LatLng origin=new LatLng(31.923951,117.124891);
+        LatLng waypoints=new LatLng(31.9342032,117.1377968);
+        LatLng dest=new LatLng(31.9283044,117.1202666);
+       String url= GoogleUutil.getDirectionsUrl(origin,waypoints,dest);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(origin));
         googleMap.moveCamera(CameraUpdateFactory.zoomTo(15));
-
-        String url = GoogleUutil.getDirectionsUrl(sydney, sydney);
         googleMap.addMarker(new MarkerOptions()
-                .position(sydney)
+                .position(origin)
                 .title("商家")
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
+        requestData(url,googleMap);
+    }
+
+    private void requestData(String url, final GoogleMap googleMap) {
+        OkGo.post(url).tag(this).execute(new StringCallback() {
+            @Override
+            public void onSuccess(String s, Call call, Response response) {
+                Gson gson=new Gson();
+                GoogleModel model=gson.fromJson(s,GoogleModel.class);
+                if (model.getStatus().equals("OK")) {
+                    GoogleModel.RoutesBean.OverviewPolylineBean polyline = model.getRoutes().get(0).getOverview_polyline();
+                    List<LatLng> decodedPath = PolyUtil.decode(polyline.getPoints());
+                    googleMap.addPolyline(new PolylineOptions().addAll(decodedPath).color(Color.BLUE));
+                }
+            }
+        });
     }
 
 
