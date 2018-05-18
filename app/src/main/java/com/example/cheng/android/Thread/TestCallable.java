@@ -19,6 +19,6 @@ public class TestCallable {
 
     public  static  void  main(String[] srgs){
         myTestCallable mMyTestCallable=new myTestCallable();
-//        ExecutorCompletionService mExecutorCompletionService= Executors.newScheduledThreadPool()
+//        ExecutorCompletionService mExecutorCompletionService= Executors.newsingle
     }
 }
