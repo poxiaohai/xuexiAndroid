@@ -7,6 +7,7 @@ import android.support.multidex.MultiDex;
 
 import com.example.cheng.GreenDao.DaoMaster;
 import com.example.cheng.GreenDao.DaoSession;
+import com.example.cheng.GreenDao.MySQLiteOpenHelper;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.lzy.okgo.OkGo;
@@ -24,7 +25,7 @@ import java.util.logging.Level;
  */
 
 public class App extends Application {
-    private DaoMaster.DevOpenHelper mHelper;
+    private MySQLiteOpenHelper mHelper;
     private SQLiteDatabase db;
     private DaoMaster mDaoMaster;
     private DaoSession mDaoSession;
@@ -43,7 +44,7 @@ public class App extends Application {
 
     private void setDatabase() {
 
-        mHelper = new DaoMaster.DevOpenHelper(this, "notes-db", null);
+        mHelper = new MySQLiteOpenHelper(this, "notes-db");
         db = mHelper.getWritableDatabase();
         // 注意：该数据库连接属于 DaoMaster，所以多个 Session 指的是相同的数据库连接。
         mDaoMaster = new DaoMaster(db);

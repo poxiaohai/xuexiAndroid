@@ -73,5 +73,6 @@ dependencies {
     compile 'com.google.maps.android:android-maps-utils:0.4.+'
     compile 'org.greenrobot:greendao:3.1.0'
     implementation 'org.greenrobot:greendao:3.2.2' // add library
+    compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.3.0'
 
 }
