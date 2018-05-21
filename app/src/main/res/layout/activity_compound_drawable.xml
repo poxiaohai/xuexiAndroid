@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
-    tools:context="com.example.cheng.android.Permission.PermissionUtilsActivity"
-    tools:showIn="@layout/activity_permission_utils">
+    tools:context="com.example.cheng.android.UI.CompoundDrawableActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableRight="@mipmap/ic_launcher"
+        android:drawablePadding="5dp"/>
 
 </LinearLayout>

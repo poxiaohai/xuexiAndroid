@@ -18,6 +18,7 @@ import com.example.cheng.android.RecyclerView.RecyclerViewActivity2;
 import com.example.cheng.android.Scroll.AndroidScrollActivity;
 import com.example.cheng.android.Scroll.ScorllActivity;
 import com.example.cheng.android.Thead.TheadActivity;
+import com.example.cheng.android.UI.UIActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
@@ -116,6 +117,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, GreenDaoActivity.class);
                         startActivity(intent);
                         break;
+                    case 17:
+                        intent.setClass(MainActivity.this, UIActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -141,5 +146,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("bugly热更新");
         list.add("okgo");
         list.add("数据库操作");
+        list.add("布局优化");
     }
 }

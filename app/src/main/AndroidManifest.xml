@@ -117,7 +117,11 @@
 
         <activity android:name=".bugly.BuglyActivity" />
         <activity android:name=".Okgo.OKGoActivity" />
-        <activity android:name="com.example.cheng.GreenDao.GreenDaoActivity"></activity>
+        <activity android:name="com.example.cheng.GreenDao.GreenDaoActivity" />
+        <activity android:name=".UI.UIActivity" />
+        <activity android:name=".UI.ViewStubActivity" />
+        <activity android:name=".UI.mergeActivity" />
+        <activity android:name=".UI.CompoundDrawableActivity"></activity>
     </application>
 
 </manifest>

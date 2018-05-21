@@ -36,10 +36,10 @@ android {
             signingConfig signingConfigs.releaseConfig
         }
     }
-    greendao{
+    greendao {
         schemaVersion 1
-        daoPackage'com.example.cheng.GreenDao'
-        targetGenDir'src/main/java'
+        daoPackage 'com.example.cheng.GreenDao'
+        targetGenDir 'src/main/java'
     }
 
 }

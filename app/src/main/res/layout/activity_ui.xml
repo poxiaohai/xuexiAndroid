@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.cheng.android.UI.UIActivity">
+    <TextView
+        android:id="@+id/Include"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Include"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/ViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ViewStub"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/merge"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="merge"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/compoundDrawable"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="compoundDrawable"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/lit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Lit"
+        android:gravity="center"/>
+
+</LinearLayout>
