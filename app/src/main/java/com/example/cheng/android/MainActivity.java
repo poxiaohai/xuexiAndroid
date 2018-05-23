@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.cheng.GreenDao.GreenDaoActivity;
+import com.example.cheng.android.CheckVersion.CheckVersionActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
 import com.example.cheng.android.Okgo.OKGoActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
@@ -121,6 +122,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, UIActivity.class);
                         startActivity(intent);
                         break;
+                    case 18:
+                        intent.setClass(MainActivity.this, CheckVersionActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -147,5 +152,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("okgo");
         list.add("数据库操作");
         list.add("布局优化");
+        list.add("版本升级");
     }
 }

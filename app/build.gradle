@@ -74,5 +74,5 @@ dependencies {
     compile 'org.greenrobot:greendao:3.1.0'
     implementation 'org.greenrobot:greendao:3.2.2' // add library
     compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.3.0'
-
+    compile 'com.allenliu.versionchecklib:library:1.6.7'
 }

@@ -17,16 +17,20 @@ public class Alipay {
     public  Alipay( int n,double money){
         accounts=new double[n];
         alipaylock=new ReentrantLock();
+        condition=alipaylock.newCondition();
         for (int i=0;i<accounts.length;i++){
             accounts[i]=money;
         }
     }
-    public  void  transfer(int form,int amount){
+    public  void  transfer(int form,int to,int amount){
         alipaylock.lock();
         try {
             while (accounts[form]<amount){
-                KLog.e("wait");
+              condition.await();//阻塞
             }
+            accounts[form]=accounts[form]-amount;
+            accounts[to]=accounts[to]+amount;
+            condition.signalAll();
         }catch (Exception e){
             e.printStackTrace();
         } finally {

@@ -120,7 +120,13 @@
         <activity android:name=".UI.UIActivity" />
         <activity android:name=".UI.ViewStubActivity" />
         <activity android:name=".UI.mergeActivity" />
-        <activity android:name=".UI.CompoundDrawableActivity"/>
+        <activity android:name=".UI.CompoundDrawableActivity" />
+        <activity android:name=".CheckVersion.CheckVersionActivity" />
+
+        <service
+            android:name=".CheckVersion.DemoService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
