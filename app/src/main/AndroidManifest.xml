@@ -126,7 +126,14 @@
         <service
             android:name=".CheckVersion.DemoService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".Volley.VolleyActivity"></activity>
+
+        <service android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace" />
+
     </application>
 
 </manifest>

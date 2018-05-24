@@ -126,6 +126,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, CheckVersionActivity.class);
                         startActivity(intent);
                         break;
+                    case 19:
+                        intent.setClass(MainActivity.this, CheckVersionActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -153,5 +157,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("数据库操作");
         list.add("布局优化");
         list.add("版本升级");
+        list.add("极光");
     }
 }

@@ -20,6 +20,8 @@ import com.tencent.bugly.beta.Beta;
 
 import java.util.logging.Level;
 
+import cn.jpush.android.api.JPushInterface;
+
 /**
  * Created by cheng on 2018/4/25.
  */
@@ -40,6 +42,12 @@ public class App extends Application {
         initOkgo();
         initLogo();
         setDatabase();
+        initJPush();
+    }
+
+    private void initJPush() {
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
     }
 
     private void setDatabase() {
