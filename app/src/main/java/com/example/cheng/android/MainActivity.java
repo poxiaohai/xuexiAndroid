@@ -20,6 +20,7 @@ import com.example.cheng.android.Scroll.AndroidScrollActivity;
 import com.example.cheng.android.Scroll.ScorllActivity;
 import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.UI.UIActivity;
+import com.example.cheng.android.Volley.VolleyActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
 import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
@@ -130,6 +131,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, CheckVersionActivity.class);
                         startActivity(intent);
                         break;
+                    case 20:
+                        intent.setClass(MainActivity.this, VolleyActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -158,5 +163,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("布局优化");
         list.add("版本升级");
         list.add("极光");
+        list.add("volley");
     }
 }
