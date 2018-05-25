@@ -14,6 +14,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.cheng.android.R;
 import com.example.cheng.android.model.IpModel;
+import com.example.cheng.android.model.JsonModel;
 import com.google.gson.Gson;
 import com.socks.library.KLog;
 
@@ -50,14 +51,15 @@ public class VolleyActivity extends AppCompatActivity {
     }
 
     private void JsonRequest() {
-        JsonObjectRequest mJsonObjectRequest=new JsonObjectRequest(Request.Method.POST,
-                "http://ip.taobao.com/service/getIpInfo.php?ip=59.108.54.37",
+        JsonObjectRequest mJsonObjectRequest=new JsonObjectRequest(Request.Method.GET,
+                "http://gank.io/api/data/Android/10/1",
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        KLog.e(response.toString());
-                        IpModel model=new Gson().fromJson(response.toString(),IpModel.class);
-                        KLog.e(model.toString());
+                      //  KLog.e(response.toString());
+                        Gson gson=new Gson();
+                        JsonModel jsonModel=gson.fromJson(response.toString(),JsonModel.class);
+                        KLog.e(jsonModel.toString());
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -71,7 +73,7 @@ public class VolleyActivity extends AppCompatActivity {
 
     private void RequestData() {
 
-        StringRequest mStringRequest=new StringRequest(Request.Method.GET, "https://www.baidu.com/", new Response.Listener<String>() {
+        StringRequest mStringRequest=new StringRequest(Request.Method.POST, "https://www.baidu.com/", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 KLog.e(response);
