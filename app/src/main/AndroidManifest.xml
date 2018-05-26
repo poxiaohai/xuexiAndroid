@@ -128,12 +128,15 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Volley.VolleyActivity"></activity>
+        <activity android:name=".Volley.VolleyActivity" />
 
-        <service android:name="cn.jpush.android.service.PushService"
+        <service
+            android:name="cn.jpush.android.service.PushService"
             android:process=":multiprocess"
             tools:node="replace" />
 
+        <activity android:name=".Service.ServiceActivity"></activity>
+        <service android:name=".Service.TestTwoService"/>
     </application>
 
 </manifest>

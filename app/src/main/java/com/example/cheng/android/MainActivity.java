@@ -18,6 +18,7 @@ import com.example.cheng.android.RecyclerView.RecyclerViewActivity;
 import com.example.cheng.android.RecyclerView.RecyclerViewActivity2;
 import com.example.cheng.android.Scroll.AndroidScrollActivity;
 import com.example.cheng.android.Scroll.ScorllActivity;
+import com.example.cheng.android.Service.ServiceActivity;
 import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.UI.UIActivity;
 import com.example.cheng.android.Volley.VolleyActivity;
@@ -135,6 +136,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, VolleyActivity.class);
                         startActivity(intent);
                         break;
+                    case 21:
+                        intent.setClass(MainActivity.this, ServiceActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -164,5 +169,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("版本升级");
         list.add("极光");
         list.add("volley");
+        list.add("service");
     }
 }
