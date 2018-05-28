@@ -141,8 +141,10 @@
         <service
             android:name=".Service.TestOnceService"
             android:enabled="true"
-            android:exported="true"></service>
-        <service android:name=".Service.IPCService"/>
+            android:exported="true" />
+        <service android:name=".Service.IPCService" />
+
+        <activity android:name=".BaseBottom.BaseBottomViewActivity"></activity>
     </application>
 
 </manifest>

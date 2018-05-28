@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.cheng.GreenDao.GreenDaoActivity;
+import com.example.cheng.android.BaseBottom.BaseBottomViewActivity;
 import com.example.cheng.android.CheckVersion.CheckVersionActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
 import com.example.cheng.android.Okgo.OKGoActivity;
@@ -140,6 +141,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, ServiceActivity.class);
                         startActivity(intent);
                         break;
+                    case 22:
+                        intent.setClass(MainActivity.this, BaseBottomViewActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -170,5 +175,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("极光");
         list.add("volley");
         list.add("service");
+        list.add("弹出框");
     }
 }
