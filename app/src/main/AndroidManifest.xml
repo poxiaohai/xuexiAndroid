@@ -135,8 +135,14 @@
             android:process=":multiprocess"
             tools:node="replace" />
 
-        <activity android:name=".Service.ServiceActivity"></activity>
-        <service android:name=".Service.TestTwoService"/>
+        <activity android:name=".Service.ServiceActivity" />
+
+        <service android:name=".Service.TestTwoService" />
+        <service
+            android:name=".Service.TestOnceService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service android:name=".Service.IPCService"/>
     </application>
 
 </manifest>
