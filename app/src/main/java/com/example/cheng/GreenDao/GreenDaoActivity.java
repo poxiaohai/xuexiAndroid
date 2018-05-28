@@ -69,6 +69,14 @@ public class GreenDaoActivity extends AppCompatActivity {
                     KLog.e(u.toString());
                 }
                 break;
+
         }
     }
+    /**
+     * 条件查询
+     */
+    public  void  selectAllList(){
+        mUserDao.queryBuilder().where(UserDao.Properties.Name.eq("sb")).list();
+    }
+
 }
