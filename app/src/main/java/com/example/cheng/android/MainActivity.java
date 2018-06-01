@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.cheng.GreenDao.GreenDaoActivity;
 import com.example.cheng.android.BaseBottom.BaseBottomViewActivity;
 import com.example.cheng.android.CheckVersion.CheckVersionActivity;
+import com.example.cheng.android.Handler.HandlerMainActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
 import com.example.cheng.android.Okgo.OKGoActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
@@ -150,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, TestActivity.class);
                         startActivity(intent);
                         break;
+                    case 24:
+                        intent.setClass(MainActivity.this, HandlerMainActivity.class);
+                        startActivity(intent);
+                        break;
+
 
                 }
             }
@@ -182,5 +188,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("service");
         list.add("弹出框");
         list.add("test");
+        list.add("handler");
     }
 }

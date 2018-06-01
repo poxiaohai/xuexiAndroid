@@ -24,12 +24,16 @@ public class ViewActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.btn1)
+    @OnClick({R.id.btn1,R.id.btn2})
     public void onViewClicked(View view) {
         Intent intent=new Intent();
         switch (view.getId()){
             case R.id.btn1:
                 intent.setClass(ViewActivity.this,ViewGroupActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn2:
+                intent.setClass(ViewActivity.this,CanvaActivity.class);
                 startActivity(intent);
                 break;
         }
