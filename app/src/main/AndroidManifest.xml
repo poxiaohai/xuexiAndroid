@@ -144,7 +144,8 @@
             android:exported="true" />
         <service android:name=".Service.IPCService" />
 
-        <activity android:name=".BaseBottom.BaseBottomViewActivity"></activity>
+        <activity android:name=".BaseBottom.BaseBottomViewActivity" />
+        <activity android:name=".Test.TestActivity"></activity>
     </application>
 
 </manifest>

@@ -20,6 +20,7 @@ import com.example.cheng.android.RecyclerView.RecyclerViewActivity2;
 import com.example.cheng.android.Scroll.AndroidScrollActivity;
 import com.example.cheng.android.Scroll.ScorllActivity;
 import com.example.cheng.android.Service.ServiceActivity;
+import com.example.cheng.android.Test.TestActivity;
 import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.UI.UIActivity;
 import com.example.cheng.android.Volley.VolleyActivity;
@@ -145,6 +146,10 @@ public class MainActivity extends AppCompatActivity {
                         intent.setClass(MainActivity.this, BaseBottomViewActivity.class);
                         startActivity(intent);
                         break;
+                    case 23:
+                        intent.setClass(MainActivity.this, TestActivity.class);
+                        startActivity(intent);
+                        break;
 
                 }
             }
@@ -176,5 +181,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("volley");
         list.add("service");
         list.add("弹出框");
+        list.add("test");
     }
 }
