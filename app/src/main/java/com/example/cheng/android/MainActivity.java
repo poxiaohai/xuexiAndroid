@@ -12,6 +12,7 @@ import com.example.cheng.GreenDao.GreenDaoActivity;
 import com.example.cheng.android.BaseBottom.BaseBottomViewActivity;
 import com.example.cheng.android.CheckVersion.CheckVersionActivity;
 import com.example.cheng.android.Handler.HandlerMainActivity;
+import com.example.cheng.android.Handler.HanlderListActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
 import com.example.cheng.android.Okgo.OKGoActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
@@ -152,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 24:
-                        intent.setClass(MainActivity.this, HandlerMainActivity.class);
+                        intent.setClass(MainActivity.this, HanlderListActivity.class);
                         startActivity(intent);
                         break;
 

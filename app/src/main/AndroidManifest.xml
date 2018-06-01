@@ -146,8 +146,10 @@
 
         <activity android:name=".BaseBottom.BaseBottomViewActivity" />
         <activity android:name=".Test.TestActivity" />
-        <activity android:name=".view.CanvaActivity"></activity>
-        <activity android:name=".Handler.HandlerMainActivity"/>
+        <activity android:name=".view.CanvaActivity" />
+        <activity android:name=".Handler.HandlerMainActivity" />
+        <activity android:name=".Handler.HanlderListActivity" />
+        <activity android:name=".Handler.SubThreadActivity"></activity>
     </application>
 
 </manifest>
