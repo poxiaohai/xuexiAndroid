@@ -48,7 +48,7 @@ android {
         daoPackage 'com.example.cheng.GreenDao'
         targetGenDir 'src/main/java'
     }
-
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
@@ -86,4 +86,5 @@ dependencies {
     compile 'cn.jiguang.sdk:jcore:1.1.9'  // 此处以JCore 1.1.9 版本为例。
     compile 'com.mcxiaoke.volley:library:1.0.19'
     implementation 'com.google.code.gson:gson:2.8.4'
+
 }
