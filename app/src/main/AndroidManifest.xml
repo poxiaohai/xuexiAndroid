@@ -149,7 +149,8 @@
         <activity android:name=".view.CanvaActivity" />
         <activity android:name=".Handler.HandlerMainActivity" />
         <activity android:name=".Handler.HanlderListActivity" />
-        <activity android:name=".Handler.SubThreadActivity"></activity>
+        <activity android:name=".Handler.SubThreadActivity" />
+        <activity android:name=".Handler.Looper3Activity"></activity>
     </application>
 
 </manifest>

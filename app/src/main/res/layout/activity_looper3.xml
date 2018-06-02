@@ -5,27 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.cheng.android.Handler.HanlderListActivity">
+    tools:context="com.example.cheng.android.Handler.Looper3Activity">
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/sendmsg"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="子线程向主线程通信"
-      />
-
+        android:text="发送消息"/>
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/shownub"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="子线程向子线程通信"
-        />
-
-    <TextView
-        android:id="@+id/suiji"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="随机显示数据"
-        />
-
+        android:text="显示数字"/>
 
 </LinearLayout>

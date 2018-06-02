@@ -26,7 +26,7 @@ public class HanlderListActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.text1, R.id.text2})
+    @OnClick({R.id.text1, R.id.text2,R.id.suiji})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.text1:
@@ -37,6 +37,10 @@ public class HanlderListActivity extends AppCompatActivity {
             case R.id.text2:
                 Intent intent1=new Intent(HanlderListActivity.this,SubThreadActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.suiji:
+                Intent intent2=new Intent(HanlderListActivity.this,Looper3Activity.class);
+                startActivity(intent2);
                 break;
         }
     }
