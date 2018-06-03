@@ -150,7 +150,9 @@
         <activity android:name=".Handler.HandlerMainActivity" />
         <activity android:name=".Handler.HanlderListActivity" />
         <activity android:name=".Handler.SubThreadActivity" />
-        <activity android:name=".Handler.Looper3Activity"></activity>
+        <activity android:name=".Handler.Looper3Activity" />
+        <activity android:name=".Animation.AnimationActivity" />
+        <activity android:name=".Animation.frameActivity"></activity>
     </application>
 
 </manifest>
