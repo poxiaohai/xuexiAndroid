@@ -152,7 +152,8 @@
         <activity android:name=".Handler.SubThreadActivity" />
         <activity android:name=".Handler.Looper3Activity" />
         <activity android:name=".Animation.AnimationActivity" />
-        <activity android:name=".Animation.frameActivity"></activity>
+        <activity android:name=".Animation.frameActivity" />
+        <activity android:name=".Animation.AttributeActivity"></activity>
     </application>
 
 </manifest>

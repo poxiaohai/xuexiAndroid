@@ -12,6 +12,11 @@
         android:layout_height="50dp"
         android:text="帧动画"/>
     <TextView
+        android:id="@+id/shuxing"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="属性动画"/>
+    <TextView
         android:id="@+id/tween"
         android:layout_width="match_parent"
         android:layout_height="50dp"
