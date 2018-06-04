@@ -67,23 +67,25 @@ public class AttributeActivity extends AppCompatActivity {
                  * 终点 y值 终点y 值
                  */
                 ta=new TranslateAnimation(0,200,0,300);
-                ta.setDuration(5000);
+                ta.setDuration(1000);
                 imageView.setAnimation(ta);
                 break;
             case R.id.Scale:
+                imageView.clearAnimation();
                 /**
                  *起点 x值 终点x值
                  * 终点 y值 终点y 值
                  */
-                scaleAnimation=new ScaleAnimation(0,2,0,2);
-                scaleAnimation.setDuration(5000);
+                scaleAnimation=new ScaleAnimation(0,200,0,200);
+                scaleAnimation.setDuration(1000);
                 imageView.setAnimation(scaleAnimation);
                 break;
             case R.id.AnimationSet:
+                imageView.clearAnimation();
                 android.view.animation.AnimationSet animationSet=new AnimationSet(true);
                 animationSet.setDuration(1000);
                 AlphaAnimation alphaAnimation=new AlphaAnimation(0,1);
-                aa.setDuration(1000);
+                alphaAnimation.setDuration(1000);
                 animationSet.addAnimation(alphaAnimation);
                 TranslateAnimation ta=new TranslateAnimation(0,100,0,200);
                 ta.setDuration(1000);
