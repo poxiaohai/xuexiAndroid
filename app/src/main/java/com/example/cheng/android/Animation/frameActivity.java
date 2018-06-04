@@ -46,6 +46,7 @@ public class frameActivity extends AppCompatActivity {
         // 通过逐帧动画的资源文件获得AnimationDrawable示例
         animationDrawable = (AnimationDrawable) getResources().getDrawable(
                 R.drawable.frame_anim);
+        animationDrawable.setOneShot(false);
         imageView.setBackground(animationDrawable);
     }
 
@@ -121,7 +122,7 @@ public class frameActivity extends AppCompatActivity {
         animationDrawable.addFrame(
                 getResources().getDrawable(R.drawable.img24), 50);
         // 设置为循环播放
-        animationDrawable.setOneShot(false);
+        animationDrawable.setOneShot(true);
         imageView.setBackground(animationDrawable);
     }
 
