@@ -22,4 +22,10 @@
         android:layout_height="50dp"
         android:text="补间动画"/>
 
+    <TextView
+        android:id="@+id/mAnimatorListener"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="动画事件"/>
+
 </LinearLayout>

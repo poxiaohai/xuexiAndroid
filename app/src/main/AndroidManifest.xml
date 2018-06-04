@@ -153,7 +153,9 @@
         <activity android:name=".Handler.Looper3Activity" />
         <activity android:name=".Animation.AnimationActivity" />
         <activity android:name=".Animation.frameActivity" />
-        <activity android:name=".Animation.AttributeActivity"></activity>
+        <activity android:name=".Animation.AttributeActivity" />
+        <activity android:name=".Animation.tweenActivity" />
+        <activity android:name=".Animation.Activitya"></activity>
     </application>
 
 </manifest>
