@@ -42,7 +42,6 @@ public class frameActivity extends AppCompatActivity {
      * 通过XML添加帧动画方法二
      */
     private void setXml2FrameAnim2() {
-
         // 通过逐帧动画的资源文件获得AnimationDrawable示例
         animationDrawable = (AnimationDrawable) getResources().getDrawable(
                 R.drawable.frame_anim);
