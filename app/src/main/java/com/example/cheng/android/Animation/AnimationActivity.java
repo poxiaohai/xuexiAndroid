@@ -8,7 +8,10 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +29,8 @@ public class AnimationActivity extends AppCompatActivity {
     TextView tween;
     @BindView(R.id.mAnimatorListener)
     TextView mAnimatorListener;
-
+    @BindView(R.id.mlayout)
+    LinearLayout mlayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +38,8 @@ public class AnimationActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.frame, R.id.tween,R.id.shuxing,R.id.mAnimatorListener})
+    @OnClick({R.id.frame, R.id.tween,R.id.shuxing,
+            R.id.mAnimatorListener,R.id.layout})
     public void onViewClicked(View view) {
         Intent intent=new Intent();
         switch (view.getId()) {
@@ -52,6 +57,14 @@ public class AnimationActivity extends AppCompatActivity {
             case R.id.mAnimatorListener:
                 Toast.makeText(AnimationActivity.this,"haha",Toast.LENGTH_LONG).show();
                 addmAnimatorListener();
+                break;
+            case R.id.layout:
+                mlayout.clearAnimation();
+                ScaleAnimation scaleAnimation=new ScaleAnimation(0,1,0,1);
+                scaleAnimation.setDuration(2000);
+                LayoutAnimationController layoutAnimationController=new LayoutAnimationController(scaleAnimation,0.5f);
+                layoutAnimationController.setOrder(LayoutAnimationController.ORDER_NORMAL);
+                mlayout.setLayoutAnimation(layoutAnimationController);
                 break;
 
         }

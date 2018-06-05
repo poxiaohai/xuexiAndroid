@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.cheng.android.Animation.AnimationActivity">
+    <LinearLayout
+        android:id="@+id/mlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ed6262"
+        android:orientation="horizontal"></LinearLayout>
     <TextView
         android:id="@+id/frame"
         android:layout_width="match_parent"
@@ -27,5 +33,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="动画事件"/>
+    <TextView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="为布局添加动画"/>
 
 </LinearLayout>

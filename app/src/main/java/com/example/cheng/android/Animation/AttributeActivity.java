@@ -1,5 +1,6 @@
 package com.example.cheng.android.Animation;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -44,7 +45,7 @@ public class AttributeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.Alpha, R.id.Rotate, R.id.Translate, R.id.Scale, R.id.AnimationSet})
+    @OnClick({R.id.Alpha, R.id.Rotate, R.id.Translate, R.id.Scale, R.id.AnimationSet,R.id.mObjectAnimator})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.Alpha:
@@ -91,6 +92,13 @@ public class AttributeActivity extends AppCompatActivity {
                 ta.setDuration(1000);
                 animationSet.addAnimation(ta);
                 imageView.setAnimation(animationSet);
+                break;
+            case R.id.mObjectAnimator:
+                imageView.clearAnimation();
+                ObjectAnimator mmObjectAnimator=ObjectAnimator.ofFloat(imageView,
+                        "translationX",300);
+                 mmObjectAnimator.setDuration(300);
+                 mmObjectAnimator.start();
                 break;
         }
     }

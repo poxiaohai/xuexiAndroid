@@ -44,10 +44,19 @@
         android:text="缩放动画"/>
 
     <TextView
+        android:id="@+id/mObjectAnimator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center|left"
+        android:text="ObjectAnimator"
+        />
+
+
+    <TextView
         android:id="@+id/AnimationSet"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center|left"
-        android:text="动画动画"
+        android:text="动画集合"
         />
 </LinearLayout>
