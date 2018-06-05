@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -57,7 +58,9 @@ public class AnimationActivity extends AppCompatActivity {
     }
 
     private void addmAnimatorListener() {
-        Animation Animation = AnimationUtils.loadAnimation(this, R.anim.view_animation);
+        mAnimatorListener.clearAnimation();
+        Animation Animation =new AlphaAnimation(0,1);
+        Animation.setDuration(10000);
         Animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {

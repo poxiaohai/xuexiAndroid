@@ -33,7 +33,6 @@ public class tweenActivity extends AppCompatActivity {
                 Intent intent=new Intent();
                 intent.setClass(tweenActivity.this,Activitya.class);
                 startActivity(intent);
-//                overridePendingTransition(android.R.anim.,R.anim.exit_anim);
                 break;
         }
     }
