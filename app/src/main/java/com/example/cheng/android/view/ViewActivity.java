@@ -24,7 +24,7 @@ public class ViewActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn1,R.id.btn2})
+    @OnClick({R.id.btn1,R.id.btn2,R.id.Flayout})
     public void onViewClicked(View view) {
         Intent intent=new Intent();
         switch (view.getId()){
@@ -34,6 +34,10 @@ public class ViewActivity extends AppCompatActivity {
                 break;
             case R.id.btn2:
                 intent.setClass(ViewActivity.this,CanvaActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.Flayout:
+                intent.setClass(ViewActivity.this,FlayoutActivity.class);
                 startActivity(intent);
                 break;
         }

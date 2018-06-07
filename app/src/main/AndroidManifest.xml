@@ -155,7 +155,8 @@
         <activity android:name=".Animation.frameActivity" />
         <activity android:name=".Animation.AttributeActivity" />
         <activity android:name=".Animation.tweenActivity" />
-        <activity android:name=".Animation.Activitya"></activity>
+        <activity android:name=".Animation.Activitya" />
+        <activity android:name=".view.FlayoutActivity"></activity>
     </application>
 
 </manifest>
