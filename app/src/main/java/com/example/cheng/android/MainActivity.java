@@ -37,15 +37,16 @@ import com.example.cheng.android.shijian.Activity.ScrollViewForListViewActivity;
 import com.example.cheng.android.shijian.Activity.ShijianActivity;
 import com.example.cheng.android.view.CircleProgressView;
 import com.example.cheng.android.view.ViewActivity;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity  {
     private ListView listView;
     private Adapter adapter;
     private ArrayList<String> list=new ArrayList<>();
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inintData();
@@ -166,8 +167,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        
     }
+
 
     private void inintData() {
         list.add("haha");

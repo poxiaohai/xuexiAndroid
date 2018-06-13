@@ -17,6 +17,7 @@ import com.lzy.okgo.cookie.store.PersistentCookieStore;
 import com.socks.library.KLog;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
+import com.umeng.commonsdk.UMConfigure;
 
 import java.util.logging.Level;
 
@@ -43,6 +44,12 @@ public class App extends Application {
         initLogo();
         setDatabase();
         initJPush();
+        inityoumeng();
+    }
+
+    private void inityoumeng() {
+        UMConfigure.setLogEnabled(true);
+        UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "6db9cfa193087c14c33ae117a543dbfa");
     }
 
     private void initJPush() {
