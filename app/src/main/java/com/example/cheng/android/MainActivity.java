@@ -37,6 +37,7 @@ import com.example.cheng.android.shijian.Activity.ScrollViewForListViewActivity;
 import com.example.cheng.android.shijian.Activity.ShijianActivity;
 import com.example.cheng.android.view.CircleProgressView;
 import com.example.cheng.android.view.ViewActivity;
+import com.example.cheng.android.youmeng.YoumengActivity;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
@@ -162,8 +163,10 @@ public class MainActivity extends BaseActivity  {
                         intent.setClass(MainActivity.this, AnimationActivity.class);
                         startActivity(intent);
                         break;
-
-
+                    case 26:
+                        intent.setClass(MainActivity.this, YoumengActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -198,5 +201,6 @@ public class MainActivity extends BaseActivity  {
         list.add("test");
         list.add("handler");
         list.add("动画");
+        list.add("友盟错误统计");
     }
 }
