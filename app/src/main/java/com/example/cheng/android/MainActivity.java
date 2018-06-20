@@ -171,6 +171,8 @@ public class MainActivity extends BaseActivity  {
                         intent.setClass(MainActivity.this, YoumengActivity.class);
                         startActivity(intent);
                         break;
+                    case 28:
+                        break;
                 }
             }
         });
@@ -207,5 +209,6 @@ public class MainActivity extends BaseActivity  {
         list.add("动画");
         list.add("友盟错误统计");
         list.add("mvp demo" );
+        list.add("AiDl" );
     }
 }
