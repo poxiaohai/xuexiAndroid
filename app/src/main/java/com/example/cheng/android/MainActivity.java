@@ -33,6 +33,7 @@ import com.example.cheng.android.adapter.Adapter;
 import com.example.cheng.android.bugly.BuglyActivity;
 import com.example.cheng.android.google.GoogleActivity;
 import com.example.cheng.android.huanxin.HuanXinMainActivity;
+import com.example.cheng.android.ipc.AidlActivity;
 import com.example.cheng.android.shijian.Activity.ScrollViewForListViewActivity;
 import com.example.cheng.android.shijian.Activity.ShijianActivity;
 import com.example.cheng.android.view.CircleProgressView;
@@ -172,6 +173,8 @@ public class MainActivity extends BaseActivity  {
                         startActivity(intent);
                         break;
                     case 28:
+                        intent.setClass(MainActivity.this, AidlActivity.class);
+                        startActivity(intent);
                         break;
                 }
             }

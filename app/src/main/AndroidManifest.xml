@@ -180,14 +180,6 @@
                 <action android:name="com.cfr.demo.IDataInterface"/>
             </intent-filter>
         </service>
-
-        <activity android:name="com.example.cheng.client.Main2Activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
