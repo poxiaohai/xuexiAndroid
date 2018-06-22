@@ -18,7 +18,21 @@
         android:id="@+id/ipcservice"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="线程之间通信"
+        android:text="aidl进程之间通信"
+        />
+
+    <TextView
+        android:id="@+id/StartMessenger"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="启动远程服务"
+        />
+
+    <TextView
+        android:id="@+id/IpcMessenger"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ipcMessenger 通信"
         />
 
 </LinearLayout>
