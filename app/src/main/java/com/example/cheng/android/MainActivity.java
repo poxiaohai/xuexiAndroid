@@ -15,6 +15,7 @@ import com.example.cheng.android.CheckVersion.CheckVersionActivity;
 import com.example.cheng.android.Handler.HandlerMainActivity;
 import com.example.cheng.android.Handler.HanlderListActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
+import com.example.cheng.android.Mvp.activity.MvpMainActivity;
 import com.example.cheng.android.Okgo.OKGoActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
 import com.example.cheng.android.Permission.PermissionUtilsActivity;
@@ -169,7 +170,7 @@ public class MainActivity extends BaseActivity  {
                         startActivity(intent);
                         break;
                     case 27:
-                        intent.setClass(MainActivity.this, YoumengActivity.class);
+                        intent.setClass(MainActivity.this, MvpMainActivity.class);
                         startActivity(intent);
                         break;
                     case 28:

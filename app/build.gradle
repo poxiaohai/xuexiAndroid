@@ -5,7 +5,6 @@ apply from: 'tinker-support.gradle'
 apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 
-
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -17,18 +16,17 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             //设置支持的SO库架构
-            
-            abiFilters 'armeabi' ,'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
             //9887bac640b6015adf45c884
         }
-        manifestPlaceholders= [
+        manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
                 JPUSH_APPKEY : "9887bac640b6015adf45c884", //JPush上注册的包名对应的appkey.
-        JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
 
-    
-    
+
     }
     lintOptions {
         abortOnError false
@@ -102,4 +100,10 @@ dependencies {
     compile 'com.umeng.sdk:common:latest.integration'
     compile 'com.umeng.sdk:utdid:1.1.5.3'
     compile 'com.umeng.sdk:analytics:7.5.0'
+
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
 }

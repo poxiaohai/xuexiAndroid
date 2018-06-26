@@ -185,9 +185,11 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.example.cheng.android.ipc.MessengerService"/>
+                <action android:name="com.example.cheng.android.ipc.MessengerService" />
             </intent-filter>
         </service>
+
+        <activity android:name=".Mvp.activity.MvpMainActivity"></activity>
     </application>
 
 </manifest>
