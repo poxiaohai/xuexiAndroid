@@ -25,6 +25,15 @@ public class ViewStubActivity extends AppCompatActivity {
          * 只有VISIBLE 才浪费资源
          */
         errorStub.setVisibility(View.VISIBLE);
+        /**
+         * 大小没有发生改变 不需要发生测量
+         */
+        errorStub.setVisibility(View.INVISIBLE);
+        /**
+         * 大小发生改变需要重新测量
+         * 该方法不建议使用
+         */
+        errorStub.setVisibility(View.GONE);
 //        errorStub.inflate();
     }
 }
