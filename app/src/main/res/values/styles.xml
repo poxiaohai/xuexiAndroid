@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -20,5 +19,9 @@
     <style name="ToolbarPopUp" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:background">@color/theme_window_background</item>
     </style>
+    <style name="SwipeBackLayout">
+        <item name="edge_size">0dp</item>
+    </style>
+
 
 </resources>

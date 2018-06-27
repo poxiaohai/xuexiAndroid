@@ -6,18 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/include_toolbar" />
-
-    <FrameLayout
-        android:id="@+id/mFrameLayout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    </FrameLayout>
+        <include layout="@layout/include_toolbar" />
 
-    <android.support.design.widget.NavigationView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        <FrameLayout
+            android:id="@+id/mFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/nav"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
