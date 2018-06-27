@@ -26,35 +26,35 @@ public class MvpMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvp_main);
-        mHomeListService = RetrofitUtils.createApi(MvpMainActivity.this, HomeListService.class);
-        mHomeListService.getHomeArticleList("growthhacker",10,20)
-                .subscribeOn(Schedulers.io())
-                .observeOn(Schedulers.io())
-                .map(new Func1<List<ArticleListBean>, List<ArticleListBean>>() {
-                    @Override
-                    public List<ArticleListBean> call(List<ArticleListBean> articleListBeans) {
-                        for (ArticleListBean articleListBean : articleListBeans) {
-                            articleListBean.setSummary(BaseUtil.delHTMLTag(articleListBean.getSummary()));
-                            articleListBean.setContent(BaseUtil.delHTMLTag(articleListBean.getContent()));
-                        }
-                        return articleListBeans;
-                    }
-                }).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<List<ArticleListBean>>() {
-                    @Override
-                    public void onCompleted() {
-                        Toast.makeText(MvpMainActivity.this,"onCompleted",Toast.LENGTH_LONG).show();
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Toast.makeText(MvpMainActivity.this,"onError",Toast.LENGTH_LONG).show();
-                    }
-
-                    @Override
-                    public void onNext(List<ArticleListBean> articleListBeans) {
-                        KLog.e(articleListBeans.size()+"");
-                    }
-                });
+//        mHomeListService = RetrofitUtils.createApi(MvpMainActivity.this, HomeListService.class);
+//        mHomeListService.getHomeArticleList("growthhacker",10,20)
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(Schedulers.io())
+//                .map(new Func1<List<ArticleListBean>, List<ArticleListBean>>() {
+//                    @Override
+//                    public List<ArticleListBean> call(List<ArticleListBean> articleListBeans) {
+//                        for (ArticleListBean articleListBean : articleListBeans) {
+//                            articleListBean.setSummary(BaseUtil.delHTMLTag(articleListBean.getSummary()));
+//                            articleListBean.setContent(BaseUtil.delHTMLTag(articleListBean.getContent()));
+//                        }
+//                        return articleListBeans;
+//                    }
+//                }).observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Observer<List<ArticleListBean>>() {
+//                    @Override
+//                    public void onCompleted() {
+//                        Toast.makeText(MvpMainActivity.this,"onCompleted",Toast.LENGTH_LONG).show();
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        Toast.makeText(MvpMainActivity.this,"onError",Toast.LENGTH_LONG).show();
+//                    }
+//
+//                    @Override
+//                    public void onNext(List<ArticleListBean> articleListBeans) {
+//                        KLog.e(articleListBeans.size()+"");
+//                    }
+//                });
     }
 }
