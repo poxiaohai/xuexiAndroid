@@ -189,7 +189,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".Mvp.activity.MvpMainActivity"></activity>
+        <activity android:name=".Mvp.activity.MvpMainActivity" />
+        <activity android:name=".Mvp.activity.ArticleDetailActivity"></activity>
     </application>
 
 </manifest>

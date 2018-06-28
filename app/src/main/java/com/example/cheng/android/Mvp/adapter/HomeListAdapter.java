@@ -1,4 +1,4 @@
-package com.example.cheng.android.Mvp;
+package com.example.cheng.android.Mvp.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.cheng.android.Mvp.Fragment.ArticleDetailFragment;
+import com.example.cheng.android.Mvp.activity.ArticleDetailActivity;
 import com.example.cheng.android.Mvp.model.ArticleListBean;
 import com.example.cheng.android.R;
 
@@ -40,26 +42,26 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
         viewHolder.tag_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(context, ArticleDetailActivity.class);
+                Intent intent = new Intent(context, ArticleDetailActivity.class);
 //                intent.putExtra(ArticleDetailFragment.ARG_ITEM_INFO, datas.get(position));
-//                context.startActivity(intent);
+                context.startActivity(intent);
             }
         });
 
         viewHolder.title_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(context, ArticleDetailActivity.class);
+                Intent intent = new Intent(context, ArticleDetailActivity.class);
 //                intent.putExtra(ArticleDetailFragment.ARG_ITEM_INFO, datas.get(position));
-//                context.startActivity(intent);
+                context.startActivity(intent);
             }
         });
         viewHolder.content_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(context, ArticleDetailActivity.class);
+                Intent intent = new Intent(context, ArticleDetailActivity.class);
 //                intent.putExtra(ArticleDetailFragment.ARG_ITEM_INFO, datas.get(position));
-//                context.startActivity(intent);
+                context.startActivity(intent);
             }
         });
 
