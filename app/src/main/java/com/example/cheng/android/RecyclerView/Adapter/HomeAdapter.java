@@ -15,7 +15,7 @@ import com.example.cheng.android.R;
 /**
  * Created by Moon on 2015/11/21.
  */
-public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> implements View.OnClickListener,View.OnLongClickListener {
+public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener,View.OnLongClickListener {
     private List<String> mList;
     private Context mContext;
     ;
@@ -55,16 +55,29 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        holder.itemView.setTag(position);
-        holder.tv.setText(mList.get(position));
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        MyViewHolder myViewHolder= (MyViewHolder) holder;
+        myViewHolder.itemView.setTag(position);
+        myViewHolder.tv.setText(mList.get(position));
     }
+
+
 
     @Override
     public void onClick(View view) {
         if (mOnItemClickListener != null) {
             mOnItemClickListener.onItemClick(view, (int) view.getTag());
         }
+    }
+
+    /**
+     * 多种布局
+     * @param position
+     * @return
+     */
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
     }
 
     @Override

@@ -2,6 +2,8 @@ package com.example.cheng.android.RecyclerView;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,7 +26,15 @@ public class RecyclerViewActivity extends Activity {
     RecyclerView mRecyclerView;
     private HomeAdapter mHomeAdapter;
     private List<String> mList=new ArrayList<>();
-
+private  Handler handler=new Handler(){
+    @Override
+    public void handleMessage(Message msg) {
+        Toast.makeText(RecyclerViewActivity.this, "第七条数据发现改变", Toast.LENGTH_LONG).show();
+        mList.remove(6);
+        mList.add(6, "第七条数据发现改变");
+        mHomeAdapter.notifyItemChanged(6);
+    }
+};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +60,16 @@ public class RecyclerViewActivity extends Activity {
             }
         });
         mRecyclerView.setAdapter(mHomeAdapter);
-
+      new Thread(){
+          @Override
+          public void run() {
+              try {
+                  this.sleep(8*1000);
+                  handler.sendEmptyMessage(1);
+              } catch (InterruptedException e) {
+                  e.printStackTrace();
+              }
+          }
+      }.start();
     }
 }
