@@ -12,6 +12,7 @@ import com.example.cheng.GreenDao.GreenDaoActivity;
 import com.example.cheng.android.Animation.AnimationActivity;
 import com.example.cheng.android.BaseBottom.BaseBottomViewActivity;
 import com.example.cheng.android.CheckVersion.CheckVersionActivity;
+import com.example.cheng.android.CoordinatorLayout.CoordinatorLayoutActivity;
 import com.example.cheng.android.Handler.HandlerMainActivity;
 import com.example.cheng.android.Handler.HanlderListActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
@@ -177,6 +178,10 @@ public class MainActivity extends BaseActivity  {
                         intent.setClass(MainActivity.this, AidlActivity.class);
                         startActivity(intent);
                         break;
+                    case 29:
+                        intent.setClass(MainActivity.this, CoordinatorLayoutActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -214,5 +219,6 @@ public class MainActivity extends BaseActivity  {
         list.add("友盟错误统计");
         list.add("mvp demo" );
         list.add("AiDl" );
+        list.add("CoordinatorLayout");
     }
 }

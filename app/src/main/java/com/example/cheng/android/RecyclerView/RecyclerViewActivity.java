@@ -60,16 +60,5 @@ private  Handler handler=new Handler(){
             }
         });
         mRecyclerView.setAdapter(mHomeAdapter);
-      new Thread(){
-          @Override
-          public void run() {
-              try {
-                  this.sleep(8*1000);
-                  handler.sendEmptyMessage(1);
-              } catch (InterruptedException e) {
-                  e.printStackTrace();
-              }
-          }
-      }.start();
     }
 }

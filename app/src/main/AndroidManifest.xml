@@ -190,7 +190,8 @@
         </service>
 
         <activity android:name=".Mvp.activity.MvpMainActivity" />
-        <activity android:name=".Mvp.activity.ArticleDetailActivity"></activity>
+        <activity android:name=".Mvp.activity.ArticleDetailActivity" />
+        <activity android:name=".CoordinatorLayout.CoordinatorLayoutActivity"></activity>
     </application>
 
 </manifest>
