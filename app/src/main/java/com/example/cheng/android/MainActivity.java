@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.cheng.CalendarLayout.CalendarViewActivity;
 import com.example.cheng.GreenDao.GreenDaoActivity;
 import com.example.cheng.android.Animation.AnimationActivity;
 import com.example.cheng.android.BaseBottom.BaseBottomViewActivity;
@@ -182,6 +183,14 @@ public class MainActivity extends BaseActivity  {
                         intent.setClass(MainActivity.this, CoordinatorLayoutActivity.class);
                         startActivity(intent);
                         break;
+                    case 30:
+                        intent.setClass(MainActivity.this, CalendarViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 31:
+                        intent.setClass(MainActivity.this,TransparentActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -220,5 +229,7 @@ public class MainActivity extends BaseActivity  {
         list.add("mvp demo" );
         list.add("AiDl" );
         list.add("CoordinatorLayout");
+        list.add("日历控件");
+        list.add("透明activity");
     }
 }
