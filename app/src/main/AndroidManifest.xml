@@ -193,8 +193,10 @@
         <activity android:name=".Mvp.activity.ArticleDetailActivity" />
         <activity android:name=".CoordinatorLayout.CoordinatorLayoutActivity" />
         <activity android:name="com.example.cheng.CalendarLayout.CalendarViewActivity" />
-        <activity android:name=".TransparentActivity"
-            android:theme="@style/translucent"></activity>
+        <activity
+            android:name=".TransparentActivity"
+            android:theme="@style/translucent" />
+        <activity android:name=".HongbaoActivity"></activity>
     </application>
 
 </manifest>

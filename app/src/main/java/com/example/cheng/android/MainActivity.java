@@ -191,6 +191,10 @@ public class MainActivity extends BaseActivity  {
                         intent.setClass(MainActivity.this,TransparentActivity.class);
                         startActivity(intent);
                         break;
+                    case 32:
+                        intent.setClass(MainActivity.this,HongbaoActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -231,5 +235,6 @@ public class MainActivity extends BaseActivity  {
         list.add("CoordinatorLayout");
         list.add("日历控件");
         list.add("透明activity");
+        list.add("红包页面");
     }
 }
