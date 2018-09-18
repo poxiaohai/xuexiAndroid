@@ -1,0 +1,232 @@
+<manifest package="com.example.cheng.android" android:versionCode="1" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0">
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.CALL_PHONE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.READ_LOGS"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+  <permission android:name="com.example.cheng.android.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+  <uses-permission android:name="com.example.cheng.android.permission.JPUSH_MESSAGE"/>
+  <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+  <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+  <application android:name="com.example.cheng.android.App" android:allowBackup="true" android:debuggable="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:testOnly="true" android:theme="@style/AppTheme.NoActionBar">
+    <activity android:name="com.example.cheng.android.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity android:name="com.example.cheng.android.activity.CircleProgressViewActivity"/>
+    <activity android:name="com.example.cheng.android.activity.VideoActivity" android:configChanges="orientation|screenSize|keyboardHidden" android:screenOrientation="portrait"/>
+    <meta-data android:name="UMENG_APPKEY" android:value="5b20c619f29d9815a9000011"/>
+    <meta-data android:name="UMENG_CHANNEL" android:value="Channel ID"/>
+    <meta-data android:name="EASEMOB_APPKEY" android:value="mrscheng#xuexandroid"/>
+    <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
+    <service android:name="com.hyphenate.chat.EMJobService" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+        <data android:scheme="package"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.USER_PRESENT"/>
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.example.cheng.android.huanxin.HuanXinMainActivity"/>
+    <activity android:name="com.example.cheng.android.huanxin.FriendListActivity"/>
+    <activity android:name="com.example.cheng.android.Thead.TheadActivity"/>
+    <activity android:name="com.example.cheng.android.Thead.Main2SubTheadActivity"/>
+    <activity android:name="com.example.cheng.android.Thead.SubTheadMessageActivity"/>
+    <activity android:name="com.example.cheng.android.shijian.Activity.ScrollViewForListViewActivity"/>
+    <activity android:name="com.example.cheng.android.shijian.Activity.ShijianActivity"/>
+    <activity android:name="com.example.cheng.android.view.ViewActivity"/>
+    <activity android:name="com.example.cheng.android.view.ViewGroupActivity"/>
+    <activity android:name="com.example.cheng.android.Listview.ListViewActivity"/>
+    <activity android:name="com.example.cheng.android.RecyclerView.RecyclerViewActivity"/>
+    <activity android:name="com.example.cheng.android.RecyclerView.RecyclerViewActivity2"/>
+    <activity android:name="com.example.cheng.android.Scroll.AndroidScrollActivity"/>
+    <activity android:name="com.example.cheng.android.Scroll.ScorllActivity"/>
+    <activity android:name="com.example.cheng.android.Permission.PermissionActivity"/>
+    <activity android:name="com.example.cheng.android.Permission.PermissionUtilsActivity" android:label="@string/title_activity_permission_utils" android:theme="@style/AppTheme.NoActionBar"/>
+    <activity android:name="com.example.cheng.android.google.GoogleActivity"/>
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDkM7Vd3CzxXeBF-vGmYSFGU6yMjqPQ0yo"/>
+    <activity android:name="com.example.cheng.android.google.SimpleFragmentModeActivity"/>
+    <activity android:name="com.example.cheng.android.google.LuxianActivity"/>
+    <activity android:name="com.tencent.bugly.beta.ui.BetaActivity" android:configChanges="keyboardHidden|orientation|screenSize|locale" android:theme="@android:style/Theme.Translucent"/>
+    <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.example.cheng.android.fileProvider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+    </provider>
+    <activity android:name="com.example.cheng.android.bugly.BuglyActivity"/>
+    <activity android:name="com.example.cheng.android.Okgo.OKGoActivity"/>
+    <activity android:name="com.example.cheng.GreenDao.GreenDaoActivity"/>
+    <activity android:name="com.example.cheng.android.UI.UIActivity"/>
+    <activity android:name="com.example.cheng.android.UI.ViewStubActivity"/>
+    <activity android:name="com.example.cheng.android.UI.mergeActivity"/>
+    <activity android:name="com.example.cheng.android.UI.CompoundDrawableActivity"/>
+    <activity android:name="com.example.cheng.android.CheckVersion.CheckVersionActivity"/>
+    <service android:name="com.example.cheng.android.CheckVersion.DemoService" android:enabled="true" android:exported="true"/>
+    <activity android:name="com.example.cheng.android.Volley.VolleyActivity"/>
+    <service android:name="cn.jpush.android.service.PushService" android:process=":multiprocess"/>
+    <activity android:name="com.example.cheng.android.Service.ServiceActivity"/>
+    <service android:name="com.example.cheng.android.Service.TestTwoService"/>
+    <service android:name="com.example.cheng.android.Service.TestOnceService" android:enabled="true" android:exported="true"/>
+    <service android:name="com.example.cheng.android.Service.IPCService"/>
+    <activity android:name="com.example.cheng.android.BaseBottom.BaseBottomViewActivity"/>
+    <activity android:name="com.example.cheng.android.Test.TestActivity"/>
+    <activity android:name="com.example.cheng.android.view.CanvaActivity"/>
+    <activity android:name="com.example.cheng.android.Handler.HandlerMainActivity"/>
+    <activity android:name="com.example.cheng.android.Handler.HanlderListActivity"/>
+    <activity android:name="com.example.cheng.android.Handler.SubThreadActivity"/>
+    <activity android:name="com.example.cheng.android.Handler.Looper3Activity"/>
+    <activity android:name="com.example.cheng.android.Animation.AnimationActivity"/>
+    <activity android:name="com.example.cheng.android.Animation.frameActivity"/>
+    <activity android:name="com.example.cheng.android.Animation.AttributeActivity"/>
+    <activity android:name="com.example.cheng.android.Animation.tweenActivity"/>
+    <activity android:name="com.example.cheng.android.Animation.Activitya"/>
+    <activity android:name="com.example.cheng.android.view.FlayoutActivity"/>
+    <activity android:name="com.example.cheng.android.youmeng.YoumengActivity"/>
+    <activity android:name="com.example.cheng.android.ipc.AidlActivity"/>
+    <service android:name="com.example.cheng.android.ipc.RoomService" android:enabled="true" android:exported="true">
+      <intent-filter>
+        <action android:name="com.cfr.demo.IDataInterface"/>
+      </intent-filter>
+    </service>
+    <service android:name="com.example.cheng.android.ipc.MessengerService" android:enabled="true" android:exported="true">
+      <intent-filter>
+        <action android:name="com.example.cheng.android.ipc.MessengerService"/>
+      </intent-filter>
+    </service>
+    <activity android:name="com.example.cheng.android.Mvp.activity.MvpMainActivity"/>
+    <activity android:name="com.example.cheng.android.Mvp.activity.ArticleDetailActivity"/>
+    <activity android:name="com.example.cheng.android.CoordinatorLayout.CoordinatorLayoutActivity"/>
+    <activity android:name="com.example.cheng.CalendarLayout.CalendarViewActivity"/>
+    <activity android:name="com.example.cheng.android.TransparentActivity" android:theme="@style/translucent"/>
+    <activity android:name="com.example.cheng.android.HongbaoActivity"/>
+    <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+    <activity android:name="com.allenliu.versionchecklib.core.VersionDialogActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/versionCheckLibvtransparentTheme"/>
+    <provider android:name="com.allenliu.versionchecklib.core.VersionFileProvider" android:authorities="com.example.cheng.android.versionProvider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/versionchecklib_file_paths"/>
+    </provider>
+    <activity android:name="com.allenliu.versionchecklib.core.PermissionDialogActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:theme="@style/versionCheckLibvtransparentTheme"/>
+    <provider android:name="com.tencent.bugly.beta.utils.BuglyFileProvider" android:authorities="com.example.cheng.android.fileProvider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+    </provider>
+    <service android:name="com.tencent.bugly.beta.tinker.TinkerResultService" android:exported="false"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_03"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_04"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_05"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_06"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_07"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_08"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_09"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_00_T" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_01_T" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$STDStub_02_T" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_03" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_04" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_05" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_06" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_07" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_08" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_09" android:launchMode="singleTop"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_00_T" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_01_T" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTStub_02_T" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_03" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_04" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_05" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_06" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_07" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_08" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_09" android:launchMode="singleTask"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_00_T" android:launchMode="singleTask" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_01_T" android:launchMode="singleTask" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SGTKStub_02_T" android:launchMode="singleTask" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_03" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_04" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_05" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_06" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_07" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_08" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_09" android:launchMode="singleInstance"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_00_T" android:launchMode="singleInstance" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_01_T" android:launchMode="singleInstance" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.tencent.tinker.loader.hotplug.ActivityStubs$SIStub_02_T" android:launchMode="singleInstance" android:theme="@android:style/Theme.Translucent"/>
+    <meta-data android:name="tinker_version" android:value="1.9.1"/>
+    <service android:name="com.tencent.tinker.lib.service.TinkerPatchService" android:exported="false" android:process=":patch"/>
+    <service android:name="com.tencent.tinker.lib.service.TinkerPatchService$InnerService" android:exported="false" android:process=":patch"/>
+    <service android:name="com.tencent.tinker.lib.service.DefaultTinkerResultService" android:exported="false"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <activity android:name="cn.jpush.android.ui.PopWinActivity" android:exported="false" android:theme="@style/MyDialogStyle"/>
+    <activity android:name="cn.jpush.android.ui.PushActivity" android:configChanges="orientation|keyboardHidden" android:exported="false" android:theme="@android:style/Theme.NoTitleBar">
+      <intent-filter>
+        <action android:name="cn.jpush.android.ui.PushActivity"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="com.example.cheng.android"/>
+      </intent-filter>
+    </activity>
+    <service android:name="cn.jpush.android.service.DaemonService" android:enabled="true" android:exported="true">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.DaemonService"/>
+        <category android:name="com.example.cheng.android"/>
+      </intent-filter>
+    </service>
+    <receiver android:name="cn.jpush.android.service.PushReceiver" android:enabled="true" android:exported="false">
+      <intent-filter android:priority="1000">
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+        <category android:name="com.example.cheng.android"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.USER_PRESENT"/>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.PACKAGE_ADDED"/>
+        <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+        <data android:scheme="package"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+    <provider android:name="cn.jpush.android.service.DataProvider" android:authorities="com.example.cheng.android.DataProvider" android:exported="false"/>
+    <provider android:name="cn.jpush.android.service.DownloadProvider" android:authorities="com.example.cheng.android.DownloadProvider" android:exported="true"/>
+    <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+    <meta-data android:name="JPUSH_APPKEY" android:value="9887bac640b6015adf45c884"/>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT"/>
+    <meta-data android:name="TINKER_ID" android:value="tinker_id_base-1.0.1"/>
+  </application>
+</manifest>

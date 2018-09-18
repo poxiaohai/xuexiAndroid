@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_follow_pressed.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_follow_pressed.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\default_icon.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\default_icon.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_explore_normal.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_explore_normal.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_register_normal.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_register_normal.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_home_pressed.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_home_pressed.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_explore_pressed.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_explore_pressed.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_register_pressed.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_register_pressed.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_question_pressed.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_question_pressed.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher_round.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_collect_pressed.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_collect_pressed.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_drawer_draft_pressed.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_drawer_draft_pressed.png"
+    }
+]

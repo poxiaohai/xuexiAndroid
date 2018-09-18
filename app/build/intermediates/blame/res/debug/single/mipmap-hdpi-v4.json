@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher_round.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_menu.png",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\src\\main\\res\\mipmap-hdpi\\ic_menu.png"
+    }
+]

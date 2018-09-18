@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\aidlclient\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26\\ic_launcher_round.xml",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\aidlclient\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\aidlclient\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26\\ic_launcher.xml",
+        "source": "E:\\xuexi\\xuexi\\xuexiAndroid\\aidlclient\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    }
+]

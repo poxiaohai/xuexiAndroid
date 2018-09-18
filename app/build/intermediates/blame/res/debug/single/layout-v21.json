@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\adfd7169114849f77dc6f6937630e82b\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\place_autocomplete_fragment.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-10.2.1.aar\\7d342cb5860b09ca7cedc7b13bd42f35\\res\\layout-v21\\place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\adfd7169114849f77dc6f6937630e82b\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\adfd7169114849f77dc6f6937630e82b\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\xuexi\\xuexi\\xuexiAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\adfd7169114849f77dc6f6937630e82b\\res\\layout-v21\\notification_template_custom_big.xml"
+    }
+]

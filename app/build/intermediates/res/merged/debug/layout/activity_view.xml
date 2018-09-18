@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.cheng.android.view.ViewActivity">
+    <TextView
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="自定义view"/>
+
+    <TextView
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="自定义view2"/>
+
+    <TextView
+        android:id="@+id/Flayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="FlayoutActivity"/>
+
+
+</LinearLayout>
