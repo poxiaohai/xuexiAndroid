@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HorizontalscrollviewActivity">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 因为HorizontalScrollView只允许加载一个子组件，所有这里定义一个线性布局作为唯一的子组件，而我们想添加的其他组件可以通过动态加载布局，这样给程序的感觉还是一个子组件（ID为scrollview_layout的组件） -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/scrollview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

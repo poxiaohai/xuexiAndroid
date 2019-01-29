@@ -113,4 +113,6 @@
     <integer name="cpb_default_min_sweep_angle">20</integer>
     <integer name="cpb_default_max_sweep_angle">300</integer>
     <color name="translucent">#01000000</color>
+    <color name="login_red">#ed6262</color>
+
 </resources>

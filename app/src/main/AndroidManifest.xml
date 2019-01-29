@@ -196,7 +196,11 @@
         <activity
             android:name=".TransparentActivity"
             android:theme="@style/translucent" />
-        <activity android:name=".HongbaoActivity"></activity>
+        <activity android:name=".HongbaoActivity" />
+        <activity android:name=".Webview.WebViewActivity" />
+        <activity android:name=".MPAndroidChart.PieChartActivity" />
+        <activity android:name=".MPAndroidChart.BarChartActivity" />
+        <activity android:name=".activity.HorizontalscrollviewActivity"></activity>
     </application>
 
 </manifest>

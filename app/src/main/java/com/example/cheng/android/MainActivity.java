@@ -17,6 +17,8 @@ import com.example.cheng.android.CoordinatorLayout.CoordinatorLayoutActivity;
 import com.example.cheng.android.Handler.HandlerMainActivity;
 import com.example.cheng.android.Handler.HanlderListActivity;
 import com.example.cheng.android.Listview.ListViewActivity;
+import com.example.cheng.android.MPAndroidChart.BarChartActivity;
+import com.example.cheng.android.MPAndroidChart.PieChartActivity;
 import com.example.cheng.android.Mvp.activity.MvpMainActivity;
 import com.example.cheng.android.Okgo.OKGoActivity;
 import com.example.cheng.android.Permission.PermissionActivity;
@@ -30,7 +32,9 @@ import com.example.cheng.android.Test.TestActivity;
 import com.example.cheng.android.Thead.TheadActivity;
 import com.example.cheng.android.UI.UIActivity;
 import com.example.cheng.android.Volley.VolleyActivity;
+import com.example.cheng.android.Webview.WebViewActivity;
 import com.example.cheng.android.activity.CircleProgressViewActivity;
+import com.example.cheng.android.activity.HorizontalscrollviewActivity;
 import com.example.cheng.android.activity.VideoActivity;
 import com.example.cheng.android.adapter.Adapter;
 import com.example.cheng.android.bugly.BuglyActivity;
@@ -195,6 +199,23 @@ public class MainActivity extends BaseActivity  {
                         intent.setClass(MainActivity.this,HongbaoActivity.class);
                         startActivity(intent);
                         break;
+                    case 33:
+                        intent.setClass(MainActivity.this,WebViewActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 34:
+                        intent.setClass(MainActivity.this,PieChartActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 35:
+                        intent.setClass(MainActivity.this,BarChartActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 36:
+                        intent.setClass(MainActivity.this,HorizontalscrollviewActivity.class);
+                        startActivity(intent);
+                        break;
+
                 }
             }
         });
@@ -236,5 +257,9 @@ public class MainActivity extends BaseActivity  {
         list.add("日历控件");
         list.add("透明activity");
         list.add("红包页面");
+        list.add("android 与js交互");
+        list.add("饼图");
+        list.add("柱状图");
+        list.add("HorizontalscrollviewActivity");
     }
 }

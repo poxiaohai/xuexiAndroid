@@ -16,9 +16,21 @@ public class Utils {
      * @since 2014-5-9
      */
     public static int getScreenH(Context context) {
-        return getScreenSize(context, false);
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(dm);
+        int width = dm.widthPixels;         // 屏幕宽度（像素）
+        int height = dm.heightPixels;       // 屏幕高度（像素）
+        return height;
     }
-
+    public static int getScreenw(Context context) {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(dm);
+        int width = dm.widthPixels;         // 屏幕宽度（像素）
+        int height = dm.heightPixels;       // 屏幕高度（像素）
+        return width;
+    }
 
     /**
      * 根据手机分辨率从 dp 单位 转成 px(像素)
@@ -28,13 +40,7 @@ public class Utils {
         return (int) (dpValue * scale + 0.5f);
     }
 
-    private static int getScreenSize(Context context, boolean isWidth) {
-        WindowManager wm = (WindowManager) context
-                .getSystemService(Context.WINDOW_SERVICE);
-        DisplayMetrics dm = new DisplayMetrics();
-        wm.getDefaultDisplay().getMetrics(dm);
-        return isWidth ? dm.widthPixels : dm.heightPixels;
-    }
+
 
 
 

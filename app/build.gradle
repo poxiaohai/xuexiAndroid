@@ -116,4 +116,5 @@ dependencies {
     }
     compile 'com.github.eschao:android-PageFlip:1.0.2'
     compile 'com.haibin:calendarview:3.4.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
 }
